@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -49,4 +51,29 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+  generate: {
+    subFolders: true,
+    routes() {
+      const cities = [
+        { name: 'Bordeaux', id: 'BOD' },
+        { name: 'Lyon', id: 'LYS' },
+        { name: 'Madrid', id: 'MAD' },
+        { name: 'Berlin', id: 'BER' },
+        { name: 'Rome', id: 'ROM' },
+      ]
+
+      const result = []
+
+      for (let i = 0; i < cities.length; i++) {
+        for (let j = 0; j < cities.length; j++) {
+          if (cities[i].id !== cities[j].id) {
+            const city = '/' + cities[i].id + '/' + cities[j].id
+            result.push(city)
+          }
+        }
+      }
+
+      return result
+    },
+  },
 }
