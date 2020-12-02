@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <h1 class="text-4xl">From {{ from }} to {{ to }}</h1>
+      <h1 class="text-4xl">From {{ result.from }} to {{ result.to }}</h1>
     </div>
     <div>
       <h2 class="text-2xl">Figures</h2>
@@ -12,14 +12,14 @@
 <script>
 export default {
   async fetch() {
-    this.posts = await fetch('https://api.nuxtjs.dev/posts').then((res) =>
-      res.json()
-    )
+    this.result = await this.getParams()
   },
   data() {
     return {
-      from: '',
-      to: '',
+      result: {
+        from: '',
+        to: '',
+      },
       cities: [
         { name: 'Bordeaux', id: 'BOD' },
         { name: 'Lyon', id: 'LYS' },
@@ -28,6 +28,18 @@ export default {
         { name: 'Rome', id: 'ROM' },
       ],
     }
+  },
+  methods: {
+    getCityName(id) {
+      return this.cities.find((el) => el.id === id).name
+    },
+    getParams() {
+      const { from, to } = this.$nuxt.$route.params
+      return {
+        from: this.getCityName(from),
+        to: this.getCityName(to),
+      }
+    },
   },
 }
 </script>
