@@ -2,7 +2,9 @@
   <div>
     <div class="container">
       <div>
-        <h1 class="text-6xl">From {{ result.from }} to {{ result.to }}</h1>
+        <h1 class="text-6xl font-display">
+          From {{ result.from }} to {{ result.to }}
+        </h1>
       </div>
       <div>
         <h2 class="text-2xl">Figures</h2>
@@ -31,7 +33,7 @@
     </div>
     <div class="container">
       <div>
-        <h2 class="text-4xl">
+        <h2 class="text-4xl font-display">
           What if we had a high speed train line between those cities?
         </h2>
       </div>

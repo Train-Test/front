@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <article>
-      <h1 class="text-6xl">{{ page.title }}</h1>
+      <h1 class="text-6xl font-display">{{ page.title }}</h1>
       <nuxt-content :document="page" />
     </article>
   </div>

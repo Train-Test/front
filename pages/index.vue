@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <h1 class="text-6xl">Train Test</h1>
+      <h1 class="text-6xl font-display">Train Test</h1>
     </div>
     <div class="grid grid-cols-2 gap-4">
       <div>
@@ -28,7 +28,7 @@
     <div v-if="from.id && to.id" class="text-center">
       <nuxt-link :to="`${from.id}/${to.id}`">
         <button
-          class="text-white text-center m-2 bg-green-500 px-4 py-2 rounded-lg"
+          class="text-white text-center m-2 bg-blue-700 lg:mt-8 mt-4 px-12 py-2 rounded-full shadow-lg"
         >
           {{ from.cta }}
         </button>

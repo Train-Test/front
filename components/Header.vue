@@ -2,7 +2,7 @@
   <div class="flex justify-between lg:px-64 lg:py-4">
     <nuxt-link to="/">
       <div>
-        <h1 class="text-xl">Train Test</h1>
+        <h1 class="text-xl font-display">Train Test</h1>
       </div>
     </nuxt-link>
     <div class="lg:w-64">
@@ -39,8 +39,17 @@ body {
   background-color: #091a28;
   color: #ebf4f1;
 }
+
+.dark-mode footer {
+  background-color: #06111a;
+}
+
 .sepia-mode body {
   background-color: #f1e7d0;
   color: #433422;
+}
+
+.sepia-mode footer {
+  background-color: #e4dbc6;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <footer class="py-4">
     <div>
       <p class="text-center">Made vith ❤️ in Bordeaux</p>
     </div>
@@ -9,5 +9,5 @@
       </nuxt-link>
       <p class="px-2">GitHub</p>
     </div>
-  </div>
+  </footer>
 </template>

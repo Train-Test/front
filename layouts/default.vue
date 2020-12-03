@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <div class="main">
     <Header />
-    <Nuxt />
+    <div class="content">
+      <Nuxt />
+    </div>
     <Footer />
   </div>
 </template>
@@ -13,17 +15,6 @@ export default {
 </script>
 
 <style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
 .home-enter-active,
 .home-leave-active {
   transition: opacity 0.3s;
@@ -31,5 +22,14 @@ html {
 .home-enter,
 .home-leave-active {
   opacity: 0;
+}
+.main {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
 }
 </style>

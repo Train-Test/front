@@ -1,4 +1,4 @@
-import axios from 'axios'
+// import axios from 'axios'
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
@@ -12,7 +12,30 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    head: {
+      titleTemplate: 'Train Test - %s',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Predict and rate',
+        },
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        {
+          rel: 'stylesheet',
+          href:
+            'https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css',
+        },
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Castoro&display=swap',
+        },
+      ],
+    },
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -33,6 +56,7 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
+    '@nuxtjs/google-fonts',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -47,7 +71,14 @@ export default {
   ],
 
   sitemap: {
-    hostname: 'https://zealous-hoover-fd46aa.netlify.app/'
+    hostname: 'https://zealous-hoover-fd46aa.netlify.app/',
+  },
+
+  googleFonts: {
+    families: {
+      Castoro: true,
+      Inter: true,
+    },
   },
 
   robots: {
