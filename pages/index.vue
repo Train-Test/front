@@ -41,6 +41,7 @@
 import Multiselect from 'vue-multiselect'
 
 export default {
+  transition: 'home',
   components: {
     Multiselect,
   },

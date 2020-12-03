@@ -2,7 +2,7 @@
   <div>
     <div class="container">
       <div>
-        <h1 class="text-4xl">From {{ result.from }} to {{ result.to }}</h1>
+        <h1 class="text-6xl">From {{ result.from }} to {{ result.to }}</h1>
       </div>
       <div>
         <h2 class="text-2xl">Figures</h2>
