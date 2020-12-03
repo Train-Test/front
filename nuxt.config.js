@@ -42,7 +42,12 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     'nuxt-vue-multiselect',
+    '@nuxtjs/sitemap',
   ],
+
+  sitemap: {
+    hostname: "https://zealous-hoover-fd46aa.netlify.app/"
+  },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
