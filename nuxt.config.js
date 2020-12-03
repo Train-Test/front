@@ -43,10 +43,17 @@ export default {
     '@nuxt/content',
     'nuxt-vue-multiselect',
     '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
   ],
 
   sitemap: {
-    hostname: "https://zealous-hoover-fd46aa.netlify.app/"
+    hostname: 'https://zealous-hoover-fd46aa.netlify.app/'
+  },
+
+  robots: {
+    UserAgent: '*',
+    Disallow: '/',
+    Sitemap: '/sitemap.xml',
   },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
