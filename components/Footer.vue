@@ -7,7 +7,16 @@
       <nuxt-link to="/credits">
         <p class="px-2">Credits</p>
       </nuxt-link>
-      <p class="px-2">GitHub</p>
+      <a
+        href="https://www.github.com/VivianSolide/train-test-front"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <p class="px-2">GitHub</p>
+      </a>
+      <nuxt-link to="/team">
+        <p class="px-2">Team</p>
+      </nuxt-link>
     </div>
   </footer>
 </template>

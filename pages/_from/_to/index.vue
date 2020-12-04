@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="container">
+  <div class="container">
+    <div>
       <div>
         <h1 class="text-6xl font-display">
           From {{ result.from }} to {{ result.to }}
@@ -10,20 +10,20 @@
         <h2 class="text-2xl">Figures</h2>
         <p>Distance: {{ result.distance }}km</p>
       </div>
-      <div class="grid grid-cols-3">
-        <div>
+      <div class="grid lg:grid-cols-3 lg:my-8 my-4">
+        <div class="my-2">
           <h3 class="text-xl">Plane</h3>
           <p>Duration: {{ result.plane.duration }}h</p>
           <p>Fare: {{ result.plane.fare }}€</p>
           <p>CO²: {{ result.plane.co2 }}g</p>
         </div>
-        <div>
+        <div class="my-2">
           <h3 class="text-xl">Car</h3>
           <p>Duration: {{ result.car.duration }}h</p>
           <p>Fare: {{ result.car.fare }}€</p>
           <p>CO²: {{ result.car.co2 }}g</p>
         </div>
-        <div>
+        <div class="my-2">
           <h3 class="text-xl">Train (currently)</h3>
           <p>Duration: {{ result.currentTrain.duration }}h</p>
           <p>Fare: {{ result.currentTrain.fare }}€</p>
@@ -31,47 +31,36 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <!-- What if ... -->
+    <div class="my-12">
       <div>
         <h2 class="text-4xl font-display">
           What if we had a high speed train line between those cities?
         </h2>
       </div>
-      <div>
+      <div class="lg:my-4">
         <h2 class="text-xl">A journey</h2>
-        <div class="grid grid-cols-3">
-          <p class="text-lg text-center">
-            Duration: {{ result.futureTrain.duration }}h
-          </p>
-          <p class="text-lg text-center">
-            Fare: {{ result.futureTrain.fare }}€
-          </p>
-          <p class="text-lg text-center">CO²: {{ result.futureTrain.co2 }}g</p>
+        <div class="grid lg:grid-cols-3">
+          <p class="">Duration: {{ result.futureTrain.duration }}h</p>
+          <p class="">Fare: {{ result.futureTrain.fare }}€</p>
+          <p class="">CO²: {{ result.futureTrain.co2 }}g</p>
         </div>
       </div>
-      <div>
+      <div class="lg:my-4">
         <h2 class="text-xl">CO² savings</h2>
-        <div class="grid grid-cols-3">
-          <p class="text-lg text-center">
-            Daily {{ result.futureTrain.savings.daily }} T
-          </p>
-          <p class="text-lg text-center">
-            Monthly {{ result.futureTrain.savings.monthly }} T
-          </p>
-          <p class="text-lg text-center">
-            Yearly {{ result.futureTrain.savings.yearly }} T
-          </p>
+        <div class="grid lg:grid-cols-3">
+          <p class="">Daily {{ result.futureTrain.savings.daily }} T</p>
+          <p class="">Monthly {{ result.futureTrain.savings.monthly }} T</p>
+          <p class="">Yearly {{ result.futureTrain.savings.yearly }} T</p>
         </div>
       </div>
-      <div>
+      <div class="lg:my-4">
         <h2 class="text-xl">Details</h2>
-        <div class="grid grid-cols-2">
-          <p class="text-lg text-center">
+        <div class="grid lg:grid-cols-2">
+          <p class="">
             Potential delivery by {{ result.futureTrain.delivery }}
           </p>
-          <p class="text-lg text-center">
-            Estimated amount: {{ result.futureTrain.amount }}€
-          </p>
+          <p class="">Estimated amount: {{ result.futureTrain.amount }}€</p>
         </div>
       </div>
     </div>
@@ -164,6 +153,11 @@ export default {
         },
       }
     },
+  },
+  head() {
+    return {
+      title: `From ${this.result.from} to ${this.result.to}`,
+    }
   },
 }
 </script>

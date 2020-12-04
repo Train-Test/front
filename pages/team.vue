@@ -10,7 +10,7 @@
 <script>
 export default {
   async asyncData({ $content }) {
-    const page = await $content('credits').fetch()
+    const page = await $content('team').fetch()
     return {
       page,
     }
