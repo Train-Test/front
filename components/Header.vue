@@ -1,8 +1,8 @@
 <template>
   <div class="flex justify-between lg:px-64 lg:py-4">
     <nuxt-link to="/">
-      <div>
-        <h1 class="text-xl font-display">Train Test</h1>
+      <div v-if="$nuxt.$route.name !== 'index'">
+        <h1 class="text-xl font-display m-1">Train Test</h1>
       </div>
     </nuxt-link>
     <div class="lg:w-64">
